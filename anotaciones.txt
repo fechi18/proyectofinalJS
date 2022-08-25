@@ -1,0 +1,82 @@
+Como declarar objetos en javascript, estructura.
+creo primero la clase que sirve como un "molde" para despues ir creando objetos que sigan las normas establecidas
+/* class Discos {
+   constructor (nombre, banda, anio, genero) {
+      this.nombre = nombre;
+      this.banda = banda;
+      this.anio = anio;
+      this.genero = genero;
+   }
+}
+
+En esta parte lo que hago es añadir nuevos objetos con el molde que cree anteriormente.
+const ledZeppelin1 = new ledzeppelin1 ("led zeppelin I", "led zeppelin", 1969, "hard rock");
+const ledZeppelin2 = new ledzeppelin1 ("led zeppelin II", "led zeppelin", 1969, "hard rock");
+const ledZeppelin3 = new ledzeppelin1 ("led zeppelin III", "led zeppelin", 1970, "hard rock");
+const ledZeppelin4 = new ledzeppelin1 ("led zeppelin IV", "led zeppelin", 1971, "hard rock");
+const houseOfTheHoly = new HouseOfTheHoly   ("Houses of the Holy", "led zeppelin", 1973, "hard rock");
+const physicalGraffiti = new PhysicalGraffiti ("Physical Graffit", "led zeppelin", 1975, "hard rock");
+const presence = new Presence ("Presence", "led zeppelin", 1976, "hard rock");
+const inTroughTheOutDoor = new InTroughTheOutDoor ("In Trough the out Door", "led zeppelin", 1979, "hard rock");
+const coda = new Coda ("led zeppelin 1", "led zeppelin", 1982, "hard rock"); */
+
+OTRA FORMA DE BUSCAR ARRAY CON FUNCIONES
+
+function prueba (elemento) {
+   retunr elemento ===3;
+}
+
+conts numero = numero.find(prueba);
+console.log (numero);
+
+1) LOS ALERT NO PUEDEN MOSTRAR OBJETOS!!
+
+PARTE DEL CODIGO javascript
+const discos = [ 
+                 {nombre: "led zeppelin 1", banda: "led zeppelin", genero: "hard rock", anio :1969, descripcion: "discbanda, considerado por muchos como el mejor disco debut de la historia."},
+                 {nombre: "led zeppelin 2", banda: "led zeppelin", genero: "hard rock", anio :1969, descripcion: "con led zeppelin II la banda logro consolidarse en la cima, como un super grupo poderoso."},
+                 {nombre: "led zeppelin 3", banda: "led zeppelin", genero: "hard rock", anio :1970, descripcion: "tercer disco de led zeppelin, a diferencia de sus antecesores, este disco mezcla musica country con nuevos sonidos."},
+                 {nombre: "led zeppelin 4", banda: "led zeppelin", genero: "hard rock", anio :1971, descripcion: "hablar de led zeppelin IV es describir en sonidos al album perfecto, con canciones que marcaron la historia del rock, se puede afirmar que su 4to album es el mejor de la banda."},
+                 {nombre: "houses of the holy", banda: "led zeppelin", genero: "hard rock", anio :1973, descripcion: "zepp sigue la formula, una mezcla de sonidos nuevos con su tan consagrada forma de tocar blues, el resultado...un iconico album con una portada que dio mucho para hablar."},
+                 {nombre: "Physical graffit", banda: "led zeppelin", genero: "hard rock", anio :1975, descripcion: "primer y unico album doble grabado en estudio, con grandes temas, algunos reciclados de sus trabajos anteriores, Physical Grafitti logro instalarse en el corazon de todos los fans de led zeppelin."},
+                 {nombre: "presence", banda: "led zeppelin", genero: "hard rock", anio :1976, descripcion: "si bien es un album con buenas canciones, no logro tener la misma autoridad que los discos anteriores de la banda, el consumo excesivo de drogas y accidentes fatales estaban haciendo mecha en los miembros, y con esto temblaba una estructura solida que la banda logro armar."},
+                 {nombre: "in trought the out door", banda: "led zeppelin", genero: "hard rock", anio :1979, descripcion: "ya en una decadencia importante, led zeppelin no logra remontar vuelo y este album es la viva prueba de ello."},
+                 {nombre: "coda", banda: "led zeppelin", genero: "hard rock", anio: 1982, descripcion: "el caos y la tragedia pintaron este disco, el cual fue una necesidad mas de la discografica que de la banda, Coda paso sin pena ni gloria, solo sera recordado por ser el ultimo disco que grabo la mejor banda de la historia del rock."} 
+               ];
+
+//Se llama al array
+
+let mensaje4 = alert ("¿Que esta buscando?");
+let buscador = prompt();
+const buscadorDisco = discos.find ( x => x.nombre.includes (buscador) );
+let resultadoBusqueda = alert (JSON.stringify (buscadorDisco) );
+
+ */
+
+ en los input tipo texto, el valor que le da el usuario se transforma en su VALUE, ahora bien, yo en el javascript si pongo input.value lo que estoy haciendo es traer el valor que el usuario le dio a ese input.
+
+ function introduccion () {
+   let mensaje1 = alert ("En Rock Museum llevamos un amplio registro de las mejores bandas de Rock de la historia");
+   let mensaje2 = alert ("Para formar parte de esta gran experiencia solo debes decidir con que banda vas a emprender este viaje");
+   let mensaje3 = alert ("Elije entre las siguiente: The Rolling Stones, Led Zepplin, Pink Floyd, Black Sabbath");
+   let eleccion = prompt ();
+   if ( (eleccion == "the rolling stones") || (eleccion == "The Rolling Stones") || (eleccion == "THE ROLLING STONES") ) {
+      return "formado en 1962, a los Rolling Stones se les ha presentado siempre como los rivales históricos de The Beatles. Dentro de esta comparación, los Stones representaron la corriente más agresiva de la música rock, aun cuando alcanzaron el estrellato de mano de la canción I wanna be your man, compuesta por los beatles John Lennon y Paul McCartney. De hecho, hasta 1965 los Stones no empezaron a publicar sus propios temas, como (I can't get no) Satisfaction o Going to a gogo, habitualmente compuestas por el cantante Mick Jagger y el guitarrista Keith Richards, mucho más infuidos por el rhythm & blues que por el propio rock & roll que marcó al grupo de Liverpool. En 1969, Jones falleció durante el transcurso de una fiesta al caer en una piscina tras haber ingerido gran cantidad de alcohol; su lugar en el grupo fue ocupado en un principio por el guitarrista Mick Taylor. En 1976, Taylor abandonó la formación y fue reemplazado por Ron Wood. Los Rolling Stones destacan por ser un grupo de una extraordinaria longevidad, pues en 1964 iniciaron su primera gira de conciertos por Estados Unidos y todavía en 1997 llevaban a cabo giras mundiales tan relevantes como la de presentación del disco Bridges to Babylon. En 2016 seguían grabando álbumes de estudio (los últimos de la banda son A Bigger Bang, de 2005, y Blue & Lonesome, lanzado en 2016) y ofreciendo recitales en directo. Este hecho, unido a su calidad musical, los ha convertido en verdaderos mitos de la música popular."
+   }
+
+   else if ( (eleccion == "pink floyd") || (eleccion == "PINK FLOYD") || (eleccion == "Pink Floyd") ) {
+      return "Grupo británico de pop rock, integrado originalmente por Syd Barret (Cambridge, Reino Unido, 1946), Nick Mason (Birmingham, id., 1945), Roger Waters (Cambridge, Reino Unido, 1944) y Richard Wright (Londres, 1945). El grupo pasó por dos etapas bien definidas, la primera con Roger Waters y Syd Barret como líderes creativos (papel que asumió el guitarrista David Gilmour cuando aquél fue expulsado por sus problemas con las drogas), y la segunda tras la marcha de Roger Waters. Principales herederos y continuadores de una línea que se hallaba ya en el álbum Sgt. Pepper's Lonely Hearts Club Band (1967) de The Beatles, su estilo musical psicodélico y las espectaculares puestas en escena de sus conciertos les confirieron una personalidad propia dentro del mundo de la música popular, hasta el punto de ser considerados como los padres de un nuevo género que se denominó rock sinfónico; desde Queen, David Bowie o Yes hasta Guns N' Roses, Chris Martin y Faith No More, los grupos e intérpretes coetáneos y posteriores que recibieron su influencia serían innumerables. Su popularidad mundial se empezó a gestar con la publicación, en 1973, del disco Dark side of the moon. En 1980 publicaron el que se convirtió en el disco más reputado del grupo, The Wall, del que tres años más tarde se extraería el filme animado del mismo título, protagonizado por Bob Geldof. En 1983, y coincidiendo con el abandono de Waters, cuyo excesivo protagonismo había enrarecido la convivencia en el seno del grupo, éste se disolvió. Cuatro años más tarde, Mason, Wright y Gilmour se reunieron de nuevo, lo que originó un proceso judicial entablado por Waters sobre la propiedad del nombre original. Resuelto el caso a favor de David Gilmour y compañía, el grupo Pink Floyd regresó al mundo de la música con un disco que se convirtió en un éxito inmediato, A momentary lapse of reason (1987)."
+   }
+
+   else if ( (eleccion == "Led Zeppelin") || (eleccion == "led zeppelin") || (eleccion == "LED ZEPPELIN") ) {
+      return "Surgido a finales de los años 60 en el Reino Unido, la influencia del grupo Led Zeppelin es incalculable en la historia del rock. Su música trasciende cualquier etiqueta, incorporando a su base hard rock y a sus textos de influencia mística o mitológica heterogéneos sonidos que tanto se inspiraron en el blues como en el folk británico o en el funk."
+   }
+
+   else if ( (eleccion == "Black Sabbath") || (eleccion == "black sabbath") || (eleccion == "BLACK SABBATH") ) {
+      return "Black Sabbath es una de las bandas más importantes, innovadoras e influyentes en la historia del Rock y el Heavy Metal. La historia de Black Sabbath comienza en Birmingham, Inglaterra, conformada por el vocalista Ozzy Osbourne, el bajista Geezer Butler, el baterista Bill Ward y el guitarrista líder Tony Iommi. Black Sabbath se hizo de un estilo propio con la incorporación de letras sobre ocultismo, terror, guerras y un sonido oscuro y siniestro (el cual pretendía dar miedo) en una época dominada por el flower power, la música folk y la cultura hippie. Las influencias de Black Sabbath en sus comienzos fueron bandas como “Cream, Fleetwood Mac, John Mayall’s Bluesbreakers, The Beatles y Jethro Tull"
+   }
+
+}
+
+let inicio = introduccion();
+document.write (inicio);
