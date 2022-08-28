@@ -31,7 +31,7 @@ body {
 }
 
 .barnav {
-    margin-top: 20px;
+    margin-top: 5px;
     list-style: none;
     display: flex;
     color: white;
@@ -50,10 +50,12 @@ body {
 }
 
 .buscador-input {
-    height: 25px;
+    height: 30px;
     padding: 0 25;
-    margin-left: 900px;
-    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 1200px;
+    font-size: 16px;
     color: black;
     border: black solid 2px;
     border-radius: 50px;

@@ -1,30 +1,20 @@
 //Inicio de desafio final
 
 //Saludo
-function saludo () {
-let pregunta1 = Swal.fire ({
-      title: "¡Hola!",
-      icon: "question",
-      input: "text",
-      inputValue: " ",
-      inputPlaceHolder: "Ingrese su nombre",
-      width: 600,
-      color: "#FFE66D",
-      background: "#2E3532"
-});
 
-let respuesta = Swal.fire ({
-      title: "Bienvenido",
-      text: (" " + "esperamos que disfrute del sitio"),
-      icon: "success",
-      width: 600,
-      color: "#FFE66D",
-      background: "#2E3532",
-      footer: "El equipo de Rockzilla-Music",
-      timer: 6000,
-      showConfirmButton: false,
-});
-};
+function saludo () {
+   Swal.fire ({
+         title: "Bienvenido",
+         text: "Esperemos que disfrute su estadia en el sitio",
+         icon: "success",
+         width: 600,
+         color: "#FFE66D",
+         background: "#2E3532",
+         footer: "El equipo de Rockzilla-Music",
+         timer: 3500,
+         showConfirmButton: false,
+   });
+   };
 
 saludo ();
 
@@ -82,15 +72,15 @@ evento1.style.fontFamily = "PermanetMaker";
 //Se creo un array con obejtos
 
 const discos = [ 
-                 {nombre: "Led zeppelin 1", banda: "led zeppelin", genero: "hard rock", anio :1969, descripcion: "discbanda, considerado por muchos como el mejor disco debut de la historia."},
-                 {nombre: "Led zeppelin 2", banda: "led zeppelin", genero: "hard rock", anio :1969, descripcion: "con led zeppelin II la banda logro consolidarse en la cima, como un super grupo poderoso."},
-                 {nombre: "Led zeppelin 3", banda: "led zeppelin", genero: "hard rock", anio :1970, descripcion: "tercer disco de led zeppelin, a diferencia de sus antecesores, este disco mezcla musica country con nuevos sonidos."},
-                 {nombre: "Led zeppelin 4", banda: "led zeppelin", genero: "hard rock", anio :1971, descripcion: "hablar de led zeppelin IV es describir en sonidos al album perfecto, con canciones que marcaron la historia del rock, se puede afirmar que su 4to album es el mejor de la banda."},
-                 {nombre: "Houses of the holy", banda: "led zeppelin", genero: "hard rock", anio :1973, descripcion: "zepp sigue la formula, una mezcla de sonidos nuevos con su tan consagrada forma de tocar blues, el resultado...un iconico album con una portada que dio mucho para hablar."},
-                 {nombre: "Physical graffit", banda: "led zeppelin", genero: "hard rock", anio :1975, descripcion: "primer y unico album doble grabado en estudio, con grandes temas, algunos reciclados de sus trabajos anteriores, Physical Grafitti logro instalarse en el corazon de todos los fans de led zeppelin."},
-                 {nombre: "Presence", banda: "led zeppelin", genero: "hard rock", anio :1976, descripcion: "si bien es un album con buenas canciones, no logro tener la misma autoridad que los discos anteriores de la banda, el consumo excesivo de drogas y accidentes fatales estaban haciendo mecha en los miembros, y con esto temblaba una estructura solida que la banda logro armar."},
-                 {nombre: "In trought the out door", banda: "led zeppelin", genero: "hard rock", anio :1979, descripcion: "ya en una decadencia importante, led zeppelin no logra remontar vuelo y este album es la viva prueba de ello."},
-                 {nombre: "Coda", banda: "led zeppelin", genero: "hard rock", anio: 1982, descripcion: "el caos y la tragedia pintaron este disco, el cual fue una necesidad mas de la discografica que de la banda, Coda paso sin pena ni gloria, solo sera recordado por ser el ultimo disco que grabo la mejor banda de la historia del rock."},
+                 {nombre: "Led zeppelin 1", banda: "led zeppelin", genero: "hard rock", anio :1969, descripcion: "Disco debut de la banda, considerado por muchos como el mejor disco debut de la historia del rock. Con solo escuchar los primeros acordes de Good times bad times, los cuatro integrantes dejaron bien en claro que vinieron a cambiar el sonido del rock para siempre."},
+                 {nombre: "Led zeppelin 2", banda: "led zeppelin", genero: "hard rock", anio :1969, descripcion: "Con led zeppelin II la banda logro consolidarse en la cima, como un super grupo poderoso."},
+                 {nombre: "Led zeppelin 3", banda: "led zeppelin", genero: "hard rock", anio :1970, descripcion: "Tercer disco de led zeppelin, a diferencia de sus antecesores, este disco mezcla musica country con nuevos sonidos."},
+                 {nombre: "Led zeppelin 4", banda: "led zeppelin", genero: "hard rock", anio :1971, descripcion: "Hablar de led zeppelin IV es describir en sonidos al album perfecto, con canciones que marcaron la historia del rock, se puede afirmar que su 4to album es el mejor de la banda."},
+                 {nombre: "Houses of the holy", banda: "led zeppelin", genero: "hard rock", anio :1973, descripcion: "Zepp sigue la formula, una mezcla de sonidos nuevos con su tan consagrada forma de tocar blues, el resultado...un iconico album con una portada que dio mucho para hablar."},
+                 {nombre: "Physical graffit", banda: "led zeppelin", genero: "hard rock", anio :1975, descripcion: "Primer y unico album doble grabado en estudio, con grandes temas, algunos reciclados de sus trabajos anteriores, Physical Grafitti logro instalarse en el corazon de todos los fans de led zeppelin."},
+                 {nombre: "Presence", banda: "led zeppelin", genero: "hard rock", anio :1976, descripcion: "Si bien es un album con buenas canciones, no logro tener la misma autoridad que los discos anteriores de la banda, el consumo excesivo de drogas y accidentes fatales estaban haciendo mecha en los miembros, y con esto temblaba una estructura solida que la banda logro armar."},
+                 {nombre: "In trought the out door", banda: "led zeppelin", genero: "hard rock", anio :1979, descripcion: "Ya en una decadencia importante, led zeppelin no logra remontar vuelo y este album es la viva prueba de ello."},
+                 {nombre: "Coda", banda: "led zeppelin", genero: "hard rock", anio: 1982, descripcion: "El caos y la tragedia pintaron este disco, el cual fue una necesidad mas de la discografica que de la banda, Coda paso sin pena ni gloria, solo sera recordado por ser el ultimo disco que grabo la mejor banda de la historia del rock."},
                  {nombre: "The piper at the gates of dawn", banda: "Pink Floyd", anio: 1967, descripcion: "Disco debut de la banda con una clara inclinacion al rock psicodelico, algo muy comun en los años 60"},
                  {nombre: "A saucerful of secrets", banda: "Pink Floyd", anio: 1968, descripcion: ""},
                  {nombre: "Music from the film more", banda: "Pink Floyd", anio: 1969, descripcion: "Se acercan los '70 y bandas como Led Zeppelin empezaron a marcar otro camino para la musica, una nueva corriente estaba naciendo, y con esto Roger Waters no queria quedarse atras, este disco es una mutacion entre sonidos exoticos pero un poco mas pesados, detalle interesante: el disco fue utilizado para la banda sonora de una pelicula"},
@@ -114,16 +104,15 @@ const buscadorDisco = discos.find ( x => x.nombre.toLowerCase().includes (busque
 let resultadoBusqueda = Swal.fire ({
    title: (busqueda),
    text: ( JSON.stringify (buscadorDisco.descripcion) ),
-   icon: "warning",
-   width: 600,
-   height: 200,
+   width: 650,
    color: "#FFE66D",
    background: "#2E3532",
    toast: false,
-   imageUrl: "Imagenes/Img-fondo.jpg",
-   imageWidth: "300px",
-   imageHight: "300px",
-   imageAlt: "discos"
+   imageUrl: "Imagenes/Img-fondo_5.jpg",
+   imageWidth: "650px",
+   imageAlt: "discos",
+   showConfirmButton: "true",
+   confirmButtonText: "Genial"
 });
 
 });

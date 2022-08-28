@@ -80,3 +80,43 @@ let resultadoBusqueda = alert (JSON.stringify (buscadorDisco) );
 
 let inicio = introduccion();
 document.write (inicio);
+
+ title: "¡Hola!",
+      icon: "question",
+      input: "text",
+      inputValue: " ",
+      inputPlaceHolder: "Ingrese su nombre",
+      width: 600,
+      color: "#FFE66D",
+      background: "#2E3532"
+
+
+SALUDO INICIAL
+      function saludo () {
+let pregunta1 = Swal.fire ({
+   title: "¡¡Hola apasionado del rock!!",
+   input: "text",
+   inputPlaceholder: "Ingrese su nombre...",
+   with: 600,
+   color: "#FFE66D",
+   background: "#2E3532",
+   confirmButtonText: "Listo",
+})
+};
+
+function saludo1 () {
+let respuesta = Swal.fire ({
+      title: "Bienvenido",
+      text: (  " " + "esperamos que disfrute del sitio"),
+      icon: "success",
+      width: 600,
+      color: "#FFE66D",
+      background: "#2E3532",
+      footer: "El equipo de Rockzilla-Music",
+      timer: 6000,
+      showConfirmButton: false,
+});
+};
+
+saludo ();
+saludo1 ();
