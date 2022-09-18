@@ -69,7 +69,7 @@ evento1.style.fontSize = "14px";
 evento1.style.fontFamily = "PermanetMaker";
 
 
-//Se creo un array con obejtos
+//Se creo un array con obejtos y se guarda en LocalStorage
 
 const discos = [ 
                  {nombre: "Led zeppelin 1", banda: "led zeppelin", genero: "hard rock", anio :1969, descripcion: "Disco debut de la banda, considerado por muchos como el mejor disco debut de la historia del rock. Con solo escuchar los primeros acordes de Good times bad times, los cuatro integrantes dejaron bien en claro que vinieron a cambiar el sonido del rock para siempre."},
@@ -95,6 +95,9 @@ const discos = [
 
                ];
 
+
+localStorage.setItem ( "discos", JSON.stringify (discos) );
+
 //Se llama al array mediante evento-interacctivo DOM
 
 const input = document.querySelector (".buscador-input");
@@ -118,7 +121,7 @@ let resultadoBusqueda = Swal.fire ({
 });
 
 
-//Se crean objetos con frases para la mascota del sitio
+//Se crean objetos con frases para la "mascota" del sitio y se aloja en localStorage
 
 const frases = [
    "El nombre de Led Zeppelin fue un chiste que se origino entre los musicos de The Who y Jimmy Page", 
@@ -144,7 +147,9 @@ const frases = [
 
 ];
 
-const dino = document.querySelector (".dino-question");
+localStorage.setItem ( "frases", JSON.stringify (frases) );
+
+/*const dino = document.querySelector (".dino-question");
 dino.addEventListener ( "click", () => {
    let reconocimiento = Math.floor (Math.random () * frases.length);
    let value = frases [reconocimiento];
@@ -167,7 +172,34 @@ dino.addEventListener ( "click", () => {
       cancelButtonColor: "#F72C25"
 
    });
-});
+}); */
 
+//Se llaman las frases desde un JSON//
 
-
+fetch ('/frases.json')
+   .then( (res) => res.json () )
+   .then( (frases) => {
+      const dino = document.querySelector (".dino-question");
+      dino.addEventListener ( "click", () => {
+        let reconocimiento = Math.floor (Math.random () * frases.length);
+        let value = frases [reconocimiento];
+        let dinofrase = Swal.fire({
+          title: "¿Sabias que...?",
+          text: ( JSON.stringify (value) ),
+          icon: "question",
+          width: 400,
+          height: 300,
+          color: "#FFE66D",
+          background: "#2E3532",
+          toast: false,
+          position: "top-end", 
+          timer: 9000,
+          showConfirmButton: true,
+          showCancelButton: true,
+          confirmButtonText: "Lo sabia",
+          confirmButtonColor:"#40F99B",
+          cancelButtonText: "No lo sabia",
+          cancelButtonColor: "#F72C25"
+         });
+      });
+   });   
